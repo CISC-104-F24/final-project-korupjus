@@ -193,6 +193,10 @@ public class PlayerUI : MonoBehaviour
                 numberEnemyThreeSpawned = 0;
             }
         }
+        if (playerLives == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
 
 
     }
