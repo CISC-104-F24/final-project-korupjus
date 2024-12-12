@@ -253,9 +253,9 @@ public class PlayerUI : MonoBehaviour
     {
         
         roundNumber = roundNumber + Round;
-        if (roundNumber > 10)
+        if (roundNumber > 11)
         {
-            roundNumber = 10;
+            roundNumber = 11;
         }
         roundNumberText = roundNumberUI.text;
         if(roundNumber == 1) // 10 difficulty
@@ -305,6 +305,10 @@ public class PlayerUI : MonoBehaviour
                 InvokeRepeating("SpawnEnemyOne", 4f, .5f);
                 InvokeRepeating("SpawnEnemyTwo", 4f, .5f);
                 InvokeRepeating("SpawnEnemyThree", .5f, .33f);
+        }
+        if(roundNumber == 11)
+        {
+            SceneManager.LoadScene(1);
         }
     }
     public void SpawnEnemyOne()
